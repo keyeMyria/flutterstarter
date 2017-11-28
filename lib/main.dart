@@ -57,9 +57,9 @@ class FromRightToLeft<T> extends MaterialPageRoute<T> {
         ),
         child: child,
       ),
-      position: new FractionalOffsetTween(
-        begin: const FractionalOffset(1.0, 0.0),
-        end: FractionalOffset.topLeft,
+      position: new Tween<Offset>(
+        begin: const Offset(1.0, 0.0),
+        end: Offset.zero,
       )
       .animate(
         new CurvedAnimation(
