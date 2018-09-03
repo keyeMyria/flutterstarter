@@ -194,7 +194,8 @@ class TabsState extends State<Tabs> {
     )
   );
 
-  void onTap(int tab){
+  void onTap(int tab) {
+
     _tabController.jumpToPage(tab);
   }
 

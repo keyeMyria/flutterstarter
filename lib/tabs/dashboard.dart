@@ -1,6 +1,33 @@
 import 'package:flutter/material.dart';
 
-class Dashboard extends StatelessWidget {
+class Dashboard extends StatefulWidget {
+  
+  Dashboard._({
+    Key key, 
+  }): super(key: key);
+  
+  final String title;
+
+  factory Dashboard({
+    Key key,
+    String title,
+  }) {
+    return Dashboard._(key: key);
+  }
+
+  @override
+  _DashboardState createState() => _DashboardState();
+}
+
+class _DashboardState extends State<Dashboard> with AutomaticKeepAliveClientMixin<Dashboard> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+  }
+
   @override
   Widget build(BuildContext context) => new Container(
     child: new Column(
@@ -16,4 +43,8 @@ class Dashboard extends StatelessWidget {
       ]
     ),
   );
+
+  @override
+  bool get wantKeepAlive => true;
+  
 }
